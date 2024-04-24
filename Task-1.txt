@@ -1,0 +1,116 @@
+
+                                                                        DIFFERENCE BETWEEN HTTP1.1 VS HTTP2
+
+     INTODUCTION OF HTTP :
+
+      . HTTP stands for hypertext transfer protocol & it is used in client-server communication. 
+      . By using HTTP user sends the request to the server & the server sends the response to the user. 
+      . There are several stages of development of HTTP but we will focus mainly on HTTP/1.1 which was created in 1997 & the new one is HTTP/2 which was created in 2015.
+      
+    HTTP/1.1:
+
+      i)  HTTP/1.1 works on the textual format.
+      ii) There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources
+      iii) HTTP/1.1 uses requests resource Inlining for use getting multiple pages
+      iv) HTTP/1.1 compresses data by itself.
+
+   HTTP/2:
+
+      i) HTTP/2 works on the binary protocol
+      ii) HTTP/2 allows multiplexing so one TCP connection is required for multiple requests.
+      iii) HTTP/2 uses PUSH frame by server that collects all multiple pages
+      iv) HTTP/2 uses HPACK for data compression
+   
+  Binary Protocol :
+ 
+    . HTTP1.1 used to process text commands to complete request-response cycles.
+    . HTTP/2 will use binary commands (in 1s and 0s) to execute the same tasks.
+    . This attribute eases complications with framing and simplifies implementation of commands that were confusingly intermixed due to commands containing text and optional 
+
+  Multiplexing :
+
+   . HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it.
+   . In contrast, HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource. 
+   . HTTP/2 does this by splitting data into binary-code messages and numbering these messages so that the client knows which stream each binary message belongs to.
+
+  Server Push:
+
+   .Typically, a server only serves content to a client device if the client asks for it. 
+   . However, this approach is not always practical for modern webpages, which often involve several dozen separate resources that the client must request. 
+   . Server Push capability allows the server to send additional cacheable information to the client that isn’t requested but is anticipated in future requests. 
+   For example, if the client requests for the resource X and it is understood that the resource Y is referenced with the requested file, the server can choose to push Y along with X instead of waiting for an appropriate client request.
+
+
+                                                      
+                                                       OBJECTS AND ITS INTERNAL REPRESENTATION IN JAVASCRIPT
+
+    
+           . Objects, in JavaScript, are the most important data type and form the building blocks for modern JavaScript. 
+           . These objects are quite different from JavaScript’s primitive data types (Number, String, Boolean, null, undefined, and symbol) in the sense that these primitive data types all store a single value each (depending on their types).
+
+  
+    Creating Objects in JavaScript:
+
+        1) By object literal
+        2) By creating instance of Object directly (using new keyword)
+
+    By object literal:
+       The syntax of creating object using object literal is given below:
+         
+     object={property1:value1,property2:value2......propertyN:valueN}
+    property and value is separated by colon(:).
+
+    Example :
+
+                   varperson={
+                   fname : "xxx",
+                   iname : "yyy",
+                   age: 25
+                   };
+
+     By creating instance of Object directly (using new keyword):
+
+     The syntax of creating object directly is given below:
+      
+       var objectname=new Object();
+
+     Here,new keyword is used to create object.
+
+   Example:
+                
+                    var emp=new Object();
+ 	emp.id=101;
+	emp.name="xxx";
+	empsalary=50000;
+
+     Accessing JavaScript Objects:
+
+      The syntax for accessing the property of an object is:
+
+	objectName.property
+
+	or
+
+	objectName[“property”]
+	
+     Accessing ‘fname’ from example 1 using dot operator,
+
+   	 	person.fnmae
+
+     Accessing ‘name’ form example 2 using [],
+
+		emp["name"]
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
